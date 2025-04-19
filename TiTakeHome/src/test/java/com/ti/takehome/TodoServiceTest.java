@@ -62,8 +62,8 @@ public class TodoServiceTest {
 
     @Test
     void saveTodo_shouldReturnSavedTodo() {
-        Todo input = new Todo(1l, "Create test", false);
-        Todo saved = new Todo(1L, "Create test", false);
+        Todo input = new Todo("Create test", false);
+        Todo saved = new Todo(1l, "Create test", false);
 
         when(todoRepository.save(input)).thenReturn(saved);
 
